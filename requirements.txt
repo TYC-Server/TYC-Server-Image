@@ -1,0 +1,11 @@
+mcdreforged==2.8.3
+hjson
+psutil
+py-cpuinfo
+parse
+requests
+cryptography
+pynbt
+redbaron
+colorlog
+ruamel.yaml
