@@ -1,7 +1,7 @@
 # TYC服务器镜像
 # 启动命令：
-#    survival: docker run -it --name="survival" -p 25565:25565 -v /root/server/server:/mcdreforged -h="survival" tyc-server:v1.0-alpha
-#    creative: docker run -it --name="creative" -p 25566:25566 -v /root/server/creative:/mcdreforged -h="creative" tyc-server:v1.0-alpha
+#    survival: docker run -it --name="survival" -p 25565:25565 -v /root/server/server:/mcdreforged -h="survival" tyc-server:v1.0-alpha.1
+#    creative: docker run -it --name="creative" -p 25566:25566 -v /root/server/creative:/mcdreforged -h="creative" tyc-server:v1.0-alpha.1
 
 
 FROM python:3.11
@@ -17,6 +17,9 @@ WORKDIR /mcdreforged
 
 
 RUN cd / \
+    && apt update \
+    && apt upgrade -y \
+    && apt clean all \
     && wget --quiet https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.tar.gz \
     && tar -xf jdk-17_linux-x64_bin.tar.gz \
     && rm -f jdk-17_linux-x64_bin.tar.gz \
