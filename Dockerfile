@@ -14,10 +14,10 @@ WORKDIR /mcdreforged
 
 
 RUN cd / \
-    && wget https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.tar.gz \
-    && tar -xf jdk-17_linux-x64_bin.tar.gz \
-    && rm -f jdk-17_linux-x64_bin.tar.gz \
-    && update-alternatives --install /usr/bin/java java /jdk-17.0.6/bin/java 1 \
+    && wget https://ghproxy.net/https://github.com/dragonwell-project/dragonwell17/releases/download/dragonwell-standard-17.0.6.0.6%2B9_jdk-17.0.6-ga/Alibaba_Dragonwell_Standard_17.0.6.0.6.9_x64_linux.tar.gz \
+    && tar -xf Alibaba_Dragonwell_Standard_17.0.6.0.6.9_x64_linux.tar.gz \
+    && rm -f Alibaba_Dragonwell_Standard_17.0.6.0.6.9_x64_linux.tar.gz \
+    && update-alternatives --install /usr/bin/java java /dragonwell-17.0.6.0.6+9-GA/bin/java 1 \
     && pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple \
     && python3 -m pip install -r /requirements.txt \
     && python3 -m pip install --upgrade pip \
