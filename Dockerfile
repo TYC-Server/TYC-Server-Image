@@ -1,7 +1,7 @@
 # TYC服务器镜像
 # 启动命令：
-#    survival: docker run --rm -it --name="survival" --expose 25565 -p 25565:25565 -p 25565:25565/udp -v /root/server/server:/mcdreforged -v /etc/localtime:/etc/localtime -h="survival" optijava/tyc-server:v1.0-beta.1
-#    creative: docker run --rm -it --name="creative" --expose 25566 -p 25566:25566 -p 25566:25566/udp -v /root/server/creative:/mcdreforged -v /etc/localtime:/etc/localtime -h="creative" optijava/tyc-server:v1.0-beta.1
+#    survival: docker run --rm -it --name="survival" --expose 25565 -p 25565:25565 -p 25565:25565/udp -v /root/server/server:/mcdreforged -v /etc/localtime:/etc/localtime -h="survival" optijava/tyc-server:v1.0-beta.2
+#    creative: docker run --rm -it --name="creative" --expose 25566 -p 25566:25566 -p 25566:25566/udp -v /root/server/creative:/mcdreforged -v /etc/localtime:/etc/localtime -h="creative" optijava/tyc-server:v1.0-beta.2
 
 
 FROM python:3.11.3
