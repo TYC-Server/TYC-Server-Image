@@ -9,6 +9,7 @@ FROM python:3.11.3
 
 
 COPY ./requirements.txt /requirements.txt
+COPY ./start.sh /start.sh
 
 
 WORKDIR /mcdreforged
@@ -23,11 +24,12 @@ RUN cd / \
     && python3 -m pip install -r /requirements.txt \
     && python3 -m pip install --upgrade pip \
     && cd /mcdreforged \
-    && python3 -m mcdreforged init
+    && python3 -m mcdreforged init \
+    && chmod +x /start.sh
 
 
 ENV LANG C.UTF-8
 ENV PYTHONUNBUFFERED 0
 
 
-CMD python3 -X utf8 -m mcdreforged
+CMD sh /start.sh
