@@ -1,3 +1,3 @@
-pip install --upgrade mcdreforged -i https://pypi.org/simple
+pip install --upgrade mcdreforged
 echo Starting MCDReforged......
 python3 -X utf8 -m mcdreforged

@@ -21,7 +21,6 @@ RUN cd / \
     && tar -xf Alibaba_Dragonwell_Standard_17.0.6.0.6.9_x64_linux.tar.gz \
     && rm -f Alibaba_Dragonwell_Standard_17.0.6.0.6.9_x64_linux.tar.gz \
     && update-alternatives --install /usr/bin/java java /dragonwell-17.0.6.0.6+9-GA/bin/java 1 \
-    && pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple \
     && python3 -m pip install -r /requirements.txt \
     && python3 -m pip install --upgrade pip \
     && cd /mcdreforged \
