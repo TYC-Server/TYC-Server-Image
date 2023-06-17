@@ -13,23 +13,24 @@ COPY ./requirements.txt /requirements.txt
 COPY ./start.sh /start.sh
 
 
-WORKDIR /mcdreforged
-
-
-RUN cd / \
-    && wget https://ghproxy.net/https://github.com/dragonwell-project/dragonwell17/releases/download/dragonwell-standard-17.0.6.0.6%2B9_jdk-17.0.6-ga/Alibaba_Dragonwell_Standard_17.0.6.0.6.9_x64_linux.tar.gz \
+RUN wget https://ghproxy.net/https://github.com/dragonwell-project/dragonwell17/releases/download/dragonwell-standard-17.0.6.0.6%2B9_jdk-17.0.6-ga/Alibaba_Dragonwell_Standard_17.0.6.0.6.9_x64_linux.tar.gz \
     && tar -xf Alibaba_Dragonwell_Standard_17.0.6.0.6.9_x64_linux.tar.gz \
     && rm -f Alibaba_Dragonwell_Standard_17.0.6.0.6.9_x64_linux.tar.gz \
     && update-alternatives --install /usr/bin/java java /dragonwell-17.0.6.0.6+9-GA/bin/java 1 \
+    && mkdir /mcdreforged \
     && python3 -m pip install -r /requirements.txt \
     && python3 -m pip install --upgrade pip \
     && cd /mcdreforged \
     && python3 -m mcdreforged init \
-    && chmod +x /start.sh
+    && chmod +x /start.sh \
+    && rm -rf /requirements.txt
+
+
+WORKDIR /mcdreforged
 
 
 ENV LANG C.UTF-8
 ENV PYTHONUNBUFFERED 0
 
 
-CMD sh /start.sh
+CMD /bin/bash /start.sh
