@@ -6,7 +6,7 @@
 # 启动命令中的路径需自行调整
 
 
-FROM python:3.11.3
+FROM python:3.11.4
 
 
 COPY ./requirements.txt /requirements.txt
@@ -14,16 +14,19 @@ COPY ./start.sh /start.sh
 
 
 RUN wget https://download.oracle.com/java/19/archive/jdk-19.0.2_linux-x64_bin.tar.gz \
-    && tar -xf jdk-19.0.2_linux-x64_bin.tar.gz \
+    && tar -xvf jdk-19.0.2_linux-x64_bin.tar.gz \
     && rm -rf jdk-19.0.2_linux-x64_bin.tar.gz \
     && update-alternatives --install /usr/bin/java java /jdk-19.0.2/bin/java 1 \
-    && mkdir /mcdreforged \
-    && python3 -m pip install -r /requirements.txt \
     && python3 -m pip install --upgrade pip \
+    && python3 -m pip install -r /requirements.txt \
+    && rm -rf /requirements.txt \
+    && apt update \
+    && apt upgrade -y \
+    && apt clean \
+    && mkdir /mcdreforged \
     && cd /mcdreforged \
     && python3 -m mcdreforged init \
     && chmod +x /start.sh \
-    && rm -rf /requirements.txt \
     && mkdir /qb_multi
 
 
@@ -34,4 +37,4 @@ ENV LANG C.UTF-8
 ENV PYTHONUNBUFFERED 0
 
 
-CMD /bin/bash /start.sh
+CMD ["/bin/bash", "/start.sh"]
