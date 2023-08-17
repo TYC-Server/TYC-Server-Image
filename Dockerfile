@@ -27,7 +27,7 @@ RUN wget https://download.oracle.com/java/19/archive/jdk-19.0.2_linux-x64_bin.ta
     && cd /mcdreforged \
     && python3 -m mcdreforged init \
     && chmod +x /start.sh \
-    && mkdir /qb_multi
+    && mkdir /server_backup
 
 
 WORKDIR /mcdreforged

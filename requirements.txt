@@ -9,3 +9,4 @@ pynbt
 redbaron
 colorlog
 ruamel.yaml
+pyzstd
