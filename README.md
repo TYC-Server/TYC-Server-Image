@@ -16,7 +16,7 @@ velocity:
 
 `docker run --rm -itd --name="vel" --net=host -h="velocity" --expose 25565 -v /root/server/vel:/mcdreforged -v /etc/localtime:/etc/localtime optijava/tyc-server:VERSION`
 
-**_启动命令中的路径以及端口需自行调整，目前仅给出了三种模板_**
+**_启动命令中的路径以及端口需自行调整，目前仅给出了三种模板。_**
 
 # 内置环境
 
@@ -25,6 +25,6 @@ velocity:
 - MCDReforged 最新版（每次run时自动更新mcdr到最新版）
 - 一些mcdr插件常用的python依赖
 
-随时更新awa
+随时更新依赖awa
 
 
