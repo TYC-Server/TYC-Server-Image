@@ -16,7 +16,7 @@ velocity:
 
 `docker run --rm -itd --name="vel" --net=host -h="velocity" --expose 25565 -v /root/server/vel:/mcdreforged -v /etc/localtime:/etc/localtime optijava/tyc-server:VERSION`
 
-**_启动命令中的路径以及端口需自行调整_**
+**_启动命令中的路径以及端口需自行调整，目前仅给出了三种模板_**
 
 # 内置环境
 
