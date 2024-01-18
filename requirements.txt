@@ -3,6 +3,7 @@ mcdreforged
 # bot - minecraft_data_api
 hjson
 parse
+fastapi
 
 # prime_backup
 psutil
