@@ -21,7 +21,7 @@ velocity:
 # 内置环境
 
 - Oracle JDK 19.0.2_linux-x64
-- Python 3.11.4
+- Python 3.12.1
 - MCDReforged 最新版（每次run时自动更新mcdr到最新版）
 - 一些mcdr插件常用的python依赖
 

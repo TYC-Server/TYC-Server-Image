@@ -1,12 +1,27 @@
 mcdreforged
+
+# bot - minecraft_data_api
 hjson
-psutil
-py-cpuinfo
 parse
+
+# prime_backup
+psutil
+pytz
+xxhash
+SQLAlchemy
+APScheduler
+zstandard
+
+# mcdr_plugin_manager
 requests
+
+# info
+#psutil
+py-cpuinfo
+
+# prcr
 cryptography
 pynbt
 redbaron
 colorlog
 ruamel.yaml
-pyzstd

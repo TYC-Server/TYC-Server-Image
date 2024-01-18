@@ -6,7 +6,7 @@
 # 启动命令中的路径需自行调整
 
 
-FROM python:3.11.4
+FROM python:3.12.1-bookworm
 
 
 COPY ./requirements.txt /requirements.txt
@@ -17,6 +17,7 @@ RUN wget https://download.oracle.com/java/19/archive/jdk-19.0.2_linux-x64_bin.ta
     && tar -xvf jdk-19.0.2_linux-x64_bin.tar.gz \
     && rm -rf jdk-19.0.2_linux-x64_bin.tar.gz \
     && update-alternatives --install /usr/bin/java java /jdk-19.0.2/bin/java 1 \
+    && pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple \
     && python3 -m pip install --upgrade pip \
     && python3 -m pip install -r /requirements.txt \
     && rm -rf /requirements.txt \
