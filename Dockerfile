@@ -13,10 +13,10 @@ COPY ./requirements.txt /requirements.txt
 COPY ./start.sh /start.sh
 
 
-RUN wget https://download.visualstudio.microsoft.com/download/pr/23dd6f08-6290-4698-891d-e676883fe2f0/f8d1a6bc29ba578d4e786ea3114bfefe/microsoft-jdk-21.0.1-linux-x64.tar.gz \
-    && tar -xvf microsoft-jdk-21.0.1-linux-x64.tar.gz \
-    && rm -rf microsoft-jdk-21.0.1-linux-x64.tar.gz \
-    && update-alternatives --install /usr/bin/java java /jdk-21.0.1+12/bin/java 1 \
+RUN wget https://dragonwell.oss-cn-shanghai.aliyuncs.com/21.0.4.0.4%2B7/Alibaba_Dragonwell_Extended_21.0.4.0.4.7_x64_linux.tar.gz \
+    && tar -xvf Alibaba_Dragonwell_Extended_21.0.4.0.4.7_x64_linux.tar.gz \
+    && rm -rf Alibaba_Dragonwell_Extended_21.0.4.0.4.7_x64_linux.tar.gz \
+    && update-alternatives --install /usr/bin/java java /dragonwell-21.0.4.0.4+7-GA/bin/java 1 \
     && pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple \
     && python3 -m pip install --upgrade pip \
     && python3 -m pip install -r /requirements.txt \

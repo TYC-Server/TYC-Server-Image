@@ -12,6 +12,7 @@ xxhash
 SQLAlchemy
 APScheduler
 zstandard
+pathspec
 
 # mcdr_plugin_manager
 requests
