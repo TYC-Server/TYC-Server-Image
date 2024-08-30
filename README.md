@@ -20,7 +20,7 @@ velocity:
 
 # 内置环境
 
-- Microsoft Build OpenJDK microsoft-jdk-21.0.1-linux-x64
+- Java Alibaba_Dragonwell_Extended_21.0.4.0.4.7_x64 （>=`v1.8`版本使用更高性能的dragonwell java）
 - Python 3.12.1
 - MCDReforged 最新版（每次run时自动更新mcdr到最新版）
 - 一些mcdr插件常用的python依赖
